@@ -1,8 +1,8 @@
 import ACTION_CONSTANTS from "./constants";
 
-export const setApplicationStatusList = (data) => (dispatch) => {
+export const setUserDetails = (data) => (dispatch) => {
     dispatch({
-      type: ACTION_CONSTANTS.APPLICATION_STATUS_LIST,
+      type: ACTION_CONSTANTS.USER_DETAILS,
       payload: data,
     });
   };

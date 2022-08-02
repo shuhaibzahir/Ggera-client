@@ -4,9 +4,9 @@ import Auth from './components/auth/Auth'
 
 const App = () => {
   return (
-    <div>
+    <>
         <Auth />
-    </div>
+    </>
   )
 }
 

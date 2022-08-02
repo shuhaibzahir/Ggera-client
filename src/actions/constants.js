@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 const ACTION_CONSTANTS = {
-   sample: "sample"
+  USER_DETAILS: "userDetails"
   };
   
   export default ACTION_CONSTANTS;
