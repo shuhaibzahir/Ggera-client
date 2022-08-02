@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setSendUSerOtp } from "../../actions/user";
 import { sendEmailAddress } from "../../apiManager/services/emailLoginServices";
 
 const Signup = () => {
+  const dispatch = useDispatch();
   const [email,setEmail] = useState('');
   const handleSubmit = ()=>{
     sendEmailAddress(email);
+    dispatch(setSendUSerOtp(true));
   }
   return (
     <div>
