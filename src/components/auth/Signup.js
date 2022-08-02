@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { sendEmailAddress } from "../../apiManager/services/emailLoginServices";
 
 const Signup = () => {
+  const [email,setEmail] = useState('');
+  const handleSubmit = ()=>{
+    console.log("submited",email);
+    sendEmailAddress(email);
+  }
   return (
     <div>
-      <form action="#" className="signin-form">
+      <form onSubmit={handleSubmit} className="signin-form">
         <div className="form-group mt-3">
           
           <label className="form-control-placeholder" for="username">
             Email
           </label>
-          <input type="text" className="form-control" required />
+          <input value={email}  onChange={(e)=> setEmail(e.target.value)} type="text" className="form-control" required />
         </div>
       
         <div className="form-group">
