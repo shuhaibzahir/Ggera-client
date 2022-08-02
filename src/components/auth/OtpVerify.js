@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import { sendOtp } from "../../apiManager/services/emailLoginServices";
 
 function OtpVerify() {
+    const [otp,setOtp] = useState("")
+    const handleSubmit = ()=>{
+        console.log("otp",otp);
+        sendOtp(otp);
+    }
   return (
     <div>
       <div>
-        <form  className="signin-form">
+        <form onSubmit={handleSubmit} className="signin-form">
           <div className="form-group mt-3">
             <label className="form-control-placeholder" for="username">
               OTP
             </label>
             <input
-              
+              value={otp}
+              onChange = {()=>setOtp(e.target.value)}
               type="text"
               className="form-control"
               required
