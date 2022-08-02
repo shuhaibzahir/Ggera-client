@@ -4,7 +4,6 @@ import { sendEmailAddress } from "../../apiManager/services/emailLoginServices";
 const Signup = () => {
   const [email,setEmail] = useState('');
   const handleSubmit = ()=>{
-    console.log("submited",email);
     sendEmailAddress(email);
   }
   return (
