@@ -1,13 +1,13 @@
-import React from 'react';
-import './App.css';
-import EmailPage from './Signup/EmailPage';
+import React from 'react'
+import Auth from './components/auth/Auth'
+// import Signup from './components/auth/Signup'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <EmailPage />
+    <div>
+        <Auth />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
